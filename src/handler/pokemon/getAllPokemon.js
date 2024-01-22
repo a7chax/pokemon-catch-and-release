@@ -1,15 +1,6 @@
-const pokemon = require('../../data/pokemon');
+const { pokemon } = require('../../data/pokemon');
 const { apiResponse, isBlank } = require('../../utils');
 
-const getAllPokemon = () => {
-  const response = (apiResponse({
-    status: 'success',
-    data: {
-      pokemon,
-    },
-  }));
-
-  return response;
-};
+const getAllPokemon = () => pokemon;
 
 module.exports = getAllPokemon;
